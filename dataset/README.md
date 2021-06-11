@@ -25,8 +25,8 @@ The files are named as follows: \
 > variation_label: values from **001 - 005** for classes 1 through 10, and values from **001 - 014** for class 11 \
 > male/female: **m** for male, **f** for female \
 > age_of_speaker: the age of the speaker \
-> first_name: the name of the speaker \
-> Example: **c001v001f23fariha**
+> contributor_no: the serial number of contributor \
+> Example: **c001v001f23contributor001**
 
 ## Commands
 | V# |          Computer Command 1:         |            Close Tab            |
