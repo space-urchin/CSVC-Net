@@ -22,11 +22,14 @@ def main(args):
         length = len(file_name)
         name = file_name[11: length]
         first_part = filename[0:11]
-
-        dst = first_part + "contributor" + str(contributors[name]) + ".wav"  
-        src = args.i + "/" + filename
-        dst = args.i + "/" + dst
-        os.rename(src, dst)
+        try:
+            dst = first_part + "contributor" + str(contributors[name]) + ".wav"  
+            src = args.i + "/" + filename
+            dst = args.i + "/" + dst
+            os.rename(src, dst)
+        except:
+            print("already renamed or there is a problem")
+        
   
 # Driver Code
 if __name__ == '__main__':
