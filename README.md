@@ -15,6 +15,55 @@ All audio samples are converted to the ‘.wav’ format, having a mono (single)
 	- Frequency Mask
 
 ## Our Model Architecture
-Our proposed architecture is a CNN-LSTM model. It consists of three main components - a CNN block, a LSTM block and Time Distributed Dense Layers. To enhance the performance of the model, we also utilized Dropout and Batch Normalization layers in different parts. A detailed diagram of our model is as follows: [CSVC-Net.pdf](https://github.com/space-urchin/BVC-Net/files/6605139/CSVC-Net.pdf)
+Our proposed architecture is a CNN-LSTM model. It consists of three main components - a CNN block, a LSTM block and Time Distributed Dense Layers. To enhance the performance of the model, we also utilized Dropout and Batch Normalization layers in different parts. A detailed diagram of our model is as follows: ![CSVC-Net.pdf](https://github.com/space-urchin/CSVC-Net/blob/main/documents/CSVC-Net.pdf?raw=true)
 
+## Run Code
+**Note**: This was developed on Ubuntu 20.04 running Python 3.8. Incase you face any dependency issue on your local machine, run via docker to replicate our local environment.
+### With Docker
+**Step 1:** Install Docker https://docs.docker.com/get-docker/
 
+**Step 2:** Build Docker Image
+```
+cd Banglish
+docker build -t banglish .
+```
+
+**Step 3:** Run
+
+#### Train
+* Set the `audio_dir` variable in `train.py` to the path where your training data is stored: https://github.com/space-urchin/CSVC-Net/blob/main/src/train.py#L18
+* Run this command from your terminal:
+```
+ docker run banglish python src/train.py               
+```
+
+#### Test
+* Set the `audio_dir` variable in `test.py` to the path where your test data is stored:https://github.com/space-urchin/CSVC-Net/blob/main/src/test.py#L22
+* Run this command from your terminal:
+```
+ docker run banglish python src/test.py               
+```
+### Without Docker
+**Step 1:** Get Python 3.8 https://www.python.org/downloads/
+
+**Step 2:** Install dependencies
+```
+cd Banglish
+pip install --no-cache-dir -r requirements.txt
+```
+
+**Step 3:** Run
+
+#### Train
+* Set the `audio_dir` variable in `train.py` to the path where your training data is stored: https://github.com/space-urchin/CSVC-Net/blob/main/src/train.py#L18
+* Run this command from your terminal:
+```
+python src/train.py               
+```
+
+[create an anchor](#anchors-in-markdown) #### Test
+* Set the `audio_dir` variable in `test.py` to the path where your test data is stored:https://github.com/space-urchin/CSVC-Net/blob/main/src/test.py#L22
+* Run this command from your terminal:
+```
+python src/test.py               
+```
