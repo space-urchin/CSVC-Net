@@ -15,7 +15,7 @@ All audio samples are converted to the ‘.wav’ format, having a mono (single)
 	- Frequency Mask
 
 ## Our Model Architecture
-Our proposed architecture is a CNN-LSTM model. It consists of three main components - a CNN block, a LSTM block and Time Distributed Dense Layers. To enhance the performance of the model, we also utilized Dropout and Batch Normalization layers in different parts. A detailed diagram of our model is as follows: ![CSVC-Net.pdf](https://github.com/space-urchin/CSVC-Net/blob/main/documents/CSVC-Net.pdf?raw=true)
+Our proposed architecture is a CNN-LSTM model. It consists of three main components - a CNN block, a LSTM block and Time Distributed Dense Layers. To enhance the performance of the model, we also utilized Dropout and Batch Normalization layers in different parts. A detailed diagram of our model is as follows: ![CSVC-Net](https://github.com/space-urchin/CSVC-Net/blob/main/documents/CSVC-Net.png?raw=true)
 
 ## Run Code
 **Note**: This was developed on Ubuntu 20.04 running Python 3.8. Incase you face any dependency issue on your local machine, run via docker to replicate our local environment.
