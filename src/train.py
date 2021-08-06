@@ -1,4 +1,8 @@
-import os
+import os, sys
+currentdir = os.path.dirname(os.path.realpath(__file__))
+parentdir = os.path.dirname(currentdir)
+sys.path.append(parentdir)
+
 from scipy.io import wavfile
 import numpy as np
 import keras
@@ -6,10 +10,12 @@ from tqdm import tqdm
 from python_speech_features import mfcc
 from sklearn.model_selection import train_test_split
 from audiomentations import SpecCompose, SpecFrequencyMask
-import models.cnnlstm as cnnlstm
 
 
-audio_dir = "./trainclean/"  # directory where training data is stored
+from models import cnnlstm
+
+
+audio_dir = "path/to/trainingset/folder/"  # directory where training data is stored
 file_names = [f for f in os.listdir(audio_dir) if ".wav" in f]
 
 _x = []
