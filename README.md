@@ -61,7 +61,7 @@ pip install --no-cache-dir -r requirements.txt
 python src/train.py               
 ```
 
-[create an anchor](#anchors-in-markdown) #### Test
+#### Test
 * Set the `audio_dir` variable in `test.py` to the path where your test data is stored:https://github.com/space-urchin/CSVC-Net/blob/main/src/test.py#L22
 * Run this command from your terminal:
 ```
