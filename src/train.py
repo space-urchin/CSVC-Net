@@ -15,7 +15,7 @@ from audiomentations import SpecCompose, SpecFrequencyMask
 from models import cnnlstm
 
 
-audio_dir = "path/to/trainingset/folder/"  # directory where training data is stored
+audio_dir = "dataset/"  # directory where training data is stored
 file_names = [f for f in os.listdir(audio_dir) if ".wav" in f]
 
 _x = []
