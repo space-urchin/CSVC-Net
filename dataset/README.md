@@ -20,7 +20,7 @@ Our curated dataset contains 3840 audio samples (.wav files) obtained from 30 fe
 
 ## Naming Convention
 The files are named as follows: \
-**c <class_label> v <variaton_label> <male/female> <age_of_speaker> <first_name>**
+**c <class_label> v <variaton_label> <male/female> <age_of_speaker> <contributor_no>**
 > class_label: values from **001 - 011** to represent 11 classes \
 > variation_label: values from **001 - 005** for classes 1 through 10, and values from **001 - 014** for class 11 \
 > male/female: **m** for male, **f** for female \
